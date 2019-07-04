@@ -10,19 +10,18 @@ class FluttriseApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: FluttriseSignInPage(title: 'Sign In'),
+      home: const FluttriseSignInPage(title: 'Sign In'),
     );
   }
 }
 
 class FluttriseSignInPage extends StatelessWidget {
-  FluttriseSignInPage({Key key, this.title}) : super(key: key);
+  const FluttriseSignInPage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
@@ -30,7 +29,7 @@ class FluttriseSignInPage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: const <Widget>[
           ],
         ),
       ),
