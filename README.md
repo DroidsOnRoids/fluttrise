@@ -1,6 +1,6 @@
 # fluttrise
 
-Unofficial [Bitrise.io](https://bitrise.io) client written in Flutter. 
+Unofficial [Bitrise.io](https://bitrise.io) client made with Flutter. 
 
 ## Setup
 Regenerate JsonSerializable mappers:
