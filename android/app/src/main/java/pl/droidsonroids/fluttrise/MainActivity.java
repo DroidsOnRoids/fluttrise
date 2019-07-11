@@ -1,4 +1,4 @@
-package com.example.fluttrise;
+package pl.droidsonroids.fluttrise;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
