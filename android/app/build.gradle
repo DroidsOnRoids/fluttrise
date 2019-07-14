@@ -43,15 +43,17 @@ android {
     signingConfigs {
         release {
             storeFile file("${System.getProperty('user.home')}/upload.jks")
-            keyAlias System.getenv('BITRISEIO_ANDROID_KEYSTORE_ALIAS')
-            storePassword System.getenv('BITRISEIO_ANDROID_KEYSTORE_PASSWORD')
-            keyPassword System.getenv('BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD')
+            keyAlias System.env.BITRISEIO_ANDROID_KEYSTORE_ALIAS
+            storePassword System.env.BITRISEIO_ANDROID_KEYSTORE_PASSWORD
+            keyPassword System.env.BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD
         }
     }
 
     buildTypes {
-        release {
-            signingConfig signingConfigs.release
+        if (System.env.BITRISE_IO != null) {
+            release {
+                signingConfig signingConfigs.release
+            }
         }
     }
 }
