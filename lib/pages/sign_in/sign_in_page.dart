@@ -9,15 +9,27 @@ class SignInPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Sign In'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            RaisedButton(
-              child: const Text('Sign In'),
-              onPressed: () {},
-            )
-          ],
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              TextFormField(
+                decoration: const InputDecoration(
+                    labelText: 'Personal access token',
+                    border: OutlineInputBorder()),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 12),
+                child: RaisedButton(
+                  textColor: Colors.white,
+                  child: const Text('SIGN IN'),
+                  onPressed: () {},
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

@@ -16,9 +16,9 @@ class FluttriseApp extends StatelessWidget {
       title: 'Fluttrise',
       theme: ThemeData(
           brightness: Brightness.light,
-          primaryColor: BitriseColors.purple,
-          buttonColor: BitriseColors.bossanova,
-          accentColor: BitriseColors.affair),
+          primaryColor: BitriseColors.affair,
+          buttonColor: BitriseColors.lightTurquoise,
+          accentColor: BitriseColors.bossanova),
       home: const SignInPage(),
     );
   }
