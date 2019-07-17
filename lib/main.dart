@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:fluttrise/pages/sign_in/sign_in_page.dart';
 
 import 'app/colors.dart';
+import 'app/platform.dart';
 
-void main() => runApp(FluttriseApp());
+void main() {
+  setupTargetPlatform();
+  runApp(FluttriseApp());
+}
 
 class FluttriseApp extends StatelessWidget {
   @override
