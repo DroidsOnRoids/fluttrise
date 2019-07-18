@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:fluttrise/pages/sign_in/sign_in_page.dart';
 
-void main() => runApp(FluttriseApp());
+import 'app/colors.dart';
+import 'app/platform.dart';
+
+void main() {
+  setupTargetPlatform();
+  runApp(FluttriseApp());
+}
 
 class FluttriseApp extends StatelessWidget {
   @override
@@ -8,31 +15,11 @@ class FluttriseApp extends StatelessWidget {
     return MaterialApp(
       title: 'Fluttrise',
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-      ),
-      home: const FluttriseSignInPage(title: 'Sign In'),
-    );
-  }
-}
-
-class FluttriseSignInPage extends StatelessWidget {
-  const FluttriseSignInPage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-          ],
-        ),
-      ),
+          brightness: Brightness.light,
+          primaryColor: BitriseColors.affair,
+          buttonColor: BitriseColors.lightTurquoise,
+          accentColor: BitriseColors.bossanova),
+      home: const SignInPage(),
     );
   }
 }
