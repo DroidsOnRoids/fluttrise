@@ -19,16 +19,18 @@ class AppListPage extends StatelessWidget {
               children: const <Widget>[
                 Icon(
                   Icons.local_florist,
-                  size: 36,
+                  size: 42,
                 ),
-                Icon(Icons.android),
-                Icon(
-                  Icons.lock,
-                  size: 16,
+                Padding(
+                  padding: EdgeInsets.only(left: 4, right: 4),
+                  child: Icon(
+                    Icons.android,
+                    color: Colors.grey,
+                  ),
                 ),
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsetsDirectional.only(start: 12),
+                    padding: EdgeInsets.only(left: 4, right: 4),
                     child: Text('App 1'),
                   ),
                 ),
