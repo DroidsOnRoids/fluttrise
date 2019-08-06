@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttrise/l10n/localizations.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({Key key}) : super(key: key);
@@ -7,7 +8,9 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sign In'),
+        title: Text(FluttriseLocalizations
+            .of(context)
+            .signInPageTitle),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -16,15 +19,19 @@ class SignInPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextFormField(
-                decoration: const InputDecoration(
-                    labelText: 'Personal access token',
-                    border: OutlineInputBorder()),
+                decoration: InputDecoration(
+                    labelText: FluttriseLocalizations
+                        .of(context)
+                        .personalAccessTokenHint,
+                    border: const OutlineInputBorder()),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 12),
                 child: RaisedButton(
                   textColor: Colors.white,
-                  child: const Text('SIGN IN'),
+                  child: Text(FluttriseLocalizations
+                      .of(context)
+                      .signInButtonText),
                   onPressed: () {},
                 ),
               )

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:fluttrise/l10n/localizations.dart';
 
 class AppListPage extends StatelessWidget {
   const AppListPage({Key key}) : super(key: key);
@@ -9,7 +10,9 @@ class AppListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Apps'),
+        title: Text(FluttriseLocalizations
+            .of(context)
+            .appListPageTitle),
       ),
       body: ListView.builder(
         itemBuilder: _buildListItem,

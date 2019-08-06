@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:fluttrise/l10n/localization.dart';
 import 'package:fluttrise/pages/sign_in/sign_in_page.dart';
 
 import 'app/colors.dart';
 import 'app/platform.dart';
+import 'l10n/localizations.dart';
 
 void main() {
   setupTargetPlatform();
@@ -29,7 +29,8 @@ class FluttriseApp extends StatelessWidget {
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      supportedLocales: [Locale('en')],
+      supportedLocales:
+      supportedLanguages.map((String languageCode) => Locale(languageCode, '')),
       home: const SignInPage(),
     );
   }
