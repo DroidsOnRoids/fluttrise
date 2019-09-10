@@ -2,6 +2,8 @@ analyzer:
   exclude:
     - 'lib/l10n/generated/**'
     - 'lib/api/model/**/*.g.dart'
+  enable-experiment:
+    - non-nullable
 
 linter:
   rules:

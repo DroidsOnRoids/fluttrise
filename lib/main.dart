@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:fluttrise/api/user_service.dart';
 import 'package:fluttrise/pages/sign_in/sign_in_page.dart';
 
 import 'app/colors.dart';
 import 'app/platform.dart';
 import 'l10n/localizations.dart';
 
-void main() {
+void main() async {
+  final service = HttpUserService();
+  await service.getUser('Dupa');
   setupTargetPlatform();
   runApp(FluttriseApp());
 }
@@ -31,7 +34,7 @@ class FluttriseApp extends StatelessWidget {
       ],
       supportedLocales:
       supportedLanguages.map((String languageCode) => Locale(languageCode, '')),
-      home: const SignInPage(),
+      home: SignInPage(),
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttrise/l10n/localizations.dart';
 
 class SignInPage extends StatelessWidget {
-  const SignInPage({Key key}) : super(key: key);
+  //const SignInPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

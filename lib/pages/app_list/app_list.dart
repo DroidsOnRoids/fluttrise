@@ -4,7 +4,7 @@ import 'package:flutter/rendering.dart';
 import 'package:fluttrise/l10n/localizations.dart';
 
 class AppListPage extends StatelessWidget {
-  const AppListPage({Key key}) : super(key: key);
+  //const AppListPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
