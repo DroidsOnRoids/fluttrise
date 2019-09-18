@@ -10,8 +10,8 @@ abstract class UserService {
 class HttpUserService implements UserService {
   @override
   Future<User?> getUser(String token) async {
-    final response = await http.get('https://www.api.bitrise.io/v0.1/me', headers: {'Authorization': token});
-    print(response);
+    final http.Response response = await http.get('https://api.bitrise.io/v0.1/me', headers: {'Authorization': token});
+    print(response.body);
     return null;
   }
 

@@ -8,7 +8,7 @@ import 'app/platform.dart';
 import 'l10n/localizations.dart';
 
 void main() async {
-  final service = HttpUserService();
+  final HttpUserService service = HttpUserService();
   await service.getUser('Dupa');
   setupTargetPlatform();
   runApp(FluttriseApp());
